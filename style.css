@@ -104,6 +104,7 @@ hr {
 }
 p {
     line-height: 1.35em;
+    font-weight: 200;
 }
 .caption {
     font-size: 16px;
