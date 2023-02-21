@@ -41,6 +41,7 @@ section {
     clear: both;
 }
 .col-8 {
+     margin: auto;
      width: 12.0%;
      float: left;
 }
