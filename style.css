@@ -40,6 +40,10 @@ section {
     text-align: justify;
     clear: both;
 }
+.col-8 {
+     width: 12.5%;
+     float: left;
+}
 .col-6 {
      width: 16.6%;
      float: left;
