@@ -78,16 +78,16 @@
         <h2>Abstract</h2>
         <hr/>
 
-        <p>We present <strong>HIPNet</strong>, a neural implicit pose network trained on multiple subjects across many poses.
-            <strong>HIPNet</strong> can disentangle subject-specific details from pose-specific details, effectively enabling
-            us to retarget motion from one subject to another or to animate between keyframes through latent
-            space interpolation. To this end, we employ a hierarchical skeleton-based representation to learn
-            a signed distance function on a canonical unposed space. This joint-based decomposition enables us
-            to represent subtle details that are local to the space around the body joint. Unlike previous neural
-            implicit method that requires ground-truth SDF for training, our model we only need a posed skeleton
-            and the point cloud for training, and we have no dependency on a traditional parametric model or
-            traditional skinning approaches. We achieve state-of-the-art results on various single-subject and
-            multi-subject benchmarks.
+        <p>To bring digital avatars into people’s lives, it is highly demanded to efficiently generate complete, realistic, and
+            animatable head avatars. This task is challenging, and it is difficult for existing methods to satisfy all the requirements
+            at once. To achieve these goals, we propose GANHead (<strong>G</strong>enerative <strong>A</strong>nimatable <strong>N</strong>eural <strong>Head</strong> Avatar), 
+            a novel generative head model that takes advantages of both the finegrained control over the explicit expression parameters and
+            the realistic rendering results of implicit representations. Specifically, GANHead represents coarse geometry, finegained
+            details and texture via three networks in canonical space to obtain the ability to generate complete and realistic
+            head avatars. To achieve flexible animation, we define the deformation filed by standard linear blend skinning (LBS),
+            with the learned continuous pose and expression bases and LBS weights. This allows the avatars to be directly animated 
+            by FLAME parameters and generalize well to unseen poses and expressions. Compared to state-of-the-art (SOTA) methods, 
+            GANHead achieves superior performance on head avatar generation and raw scan fitting.
             </p>
     </section>
 
