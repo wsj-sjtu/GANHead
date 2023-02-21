@@ -1,0 +1,200 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<div class="topnav" id="myTopnav">
+  <a href="https://www.nvidia.com/"><img width="100%" src="assets/nvidia.svg"></a>
+  <a href="https://nv-tlabs.github.io/" ><strong>Toronto AI Lab</strong></a>
+</div>
+
+<!-- End : Google Analytics Code -->
+<script type="text/javascript" src="../js/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<head>
+    <title>Hierarchical Neural Implicit Pose Network for Animation and Motion Retargeting</title>
+    <meta property="og:description" content="Hierarchical Neural Implicit Pose Network for Animation and Motion Retargeting"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HHDEXF452"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6HHDEXF452');
+</script>
+
+</head>
+
+
+ <body>
+<div class="container">
+    <div class="paper-title">
+      <h1>Hierarchical Neural Implicit Pose Network for Animation and Motion Retargeting</h1>
+    </div>
+
+    
+    <div id="authors">
+        <div class="author-row">
+            <div class="col-5 text-center"><a href="https://sravb.github.io/">Sourav Biswas</a><sup>1,2</sup></div>
+            <div class="col-5 text-center"><a href="https://kangxue.org/">Kangxue Yin</a><sup>1</sup></div>
+            <div class="col-5 text-center"><a href="https://shumash.com/">Maria Shugrina</a><sup>1</sup></div>
+            <div class="col-5 text-center"><a href="https://www.cs.toronto.edu/~fidler/">Sanja Fidler</a><sup>1,3,4</sup></div>
+            <div class="col-5 text-center"><a href="https://www.samehkhamis.com/">Sameh Khamis</a><sup>1</sup></div>
+        </div>
+
+        <div class="affil-row">
+            <div class="col-4 text-center"><sup>1</sup>NVIDIA</a></div>
+            <div class="col-4 text-center"><sup>2</sup>University of Waterloo</a></div>
+            <div class="col-4 text-center"><sup>3</sup>University of Toronto</div>
+            <div class="col-4 text-center"><sup>4</sup>Vector Institute</div>
+        </div>
+
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+            <a class="supp-btn" href="https://arxiv.org/abs/2112.00958">
+                <span class="material-icons"> description </span>
+                 Paper
+            </a>
+            <a class="supp-btn" href="assets/bib.txt">
+                <span class="material-icons"> description </span>
+                  BibTeX
+            </a>
+        </div></div>
+    </div>
+
+    <section id="teaser">
+        <a href="assets/teaser.png">
+            <img width="100%" src="assets/teaser.png">
+        </a>
+        <p class="caption">Our approach, <strong>HIPNet</strong>, models 3D shape of multiple articulated
+            subjects in a single trained neural implicit representation, while showing
+            excellent reconstruction, generalization to novel poses, and only requiring weak supervision.
+        </p>
+    </section>
+
+    <section id="abstract"/>
+        <h2>Abstract</h2>
+        <hr/>
+
+        <p>We present <strong>HIPNet</strong>, a neural implicit pose network trained on multiple subjects across many poses.
+            <strong>HIPNet</strong> can disentangle subject-specific details from pose-specific details, effectively enabling
+            us to retarget motion from one subject to another or to animate between keyframes through latent
+            space interpolation. To this end, we employ a hierarchical skeleton-based representation to learn
+            a signed distance function on a canonical unposed space. This joint-based decomposition enables us
+            to represent subtle details that are local to the space around the body joint. Unlike previous neural
+            implicit method that requires ground-truth SDF for training, our model we only need a posed skeleton
+            and the point cloud for training, and we have no dependency on a traditional parametric model or
+            traditional skinning approaches. We achieve state-of-the-art results on various single-subject and
+            multi-subject benchmarks.
+            </p>
+    </section>
+
+    <section id="method">
+        <h2>Method</h2>
+        <hr/>
+        <figure style="width: 100%;">
+            <a href="assets/method.png">
+                <img width="100%" src="assets/method.png">
+            </a>
+            <p class="caption" style="margin-bottom: 1px;">
+                <strong>HIPNet</strong> is composed of separate sub-network MLPs arranged hierarchically according to
+                an input skeleton. The final aggregation network is fed the results of these sub-networks an
+                 outputs the final SDF value. The subject latent codes \(\boldsymbol\beta_i\) are optimized
+                 during training, alongside the parameters of the pose encoding network \(\boldsymbol\Phi\).
+                 Refer to the text for additional details.
+            </p>
+        </figure>
+        
+
+        <section id="results"/>
+        <h2>Results</h2>
+        <hr/>
+
+        <figure style="width: 100%;">    
+            <video class="centered" width="100%" controls muted loop autoplay>
+                <source src="assets/interpolation.mkv" type="video/mp4">
+            </video>
+            <a href="assets/gallery.png">
+                <img width="100%" src="assets/gallery.png">
+            </a>
+            <p class="caption">
+            Unlike various prior works, our model does not require a traditional morphable model during training.
+            Our shape space is entirely learnt from data, and our pose space is hierarchically-defined and driven by
+            the input 3D pose, which enables us to generalize to unseen poses.
+            </p>
+        </figure>
+
+        <br/>
+        <hr/>
+        <figure style="width: 100%;">  
+            <video class="centered" width="100%" controls muted loop autoplay>
+                <source src="assets/multi.mp4" type="video/mp4">
+            </video>
+        </figure>
+
+
+    </section>
+    
+    
+    <section id="applications">
+        <h2>Applications</h2>
+        <hr/>
+        <figure style="width: 100%;">
+            <a href="assets/rand.jpg">
+                <img width="100%" src="assets/rand.jpg">
+            </a>
+            <p class="caption">The shape space of <strong>HIPNet</strong> is entirely data-driven. We can sample new random subjects from our shape space by fitting a multivariate Gaussian
+                to our subject embeddings.
+            </p>
+        </figure>
+        <br/>
+        <hr/>
+        
+        <figure style="width: 100%;">
+            <a href="assets/opt.png">
+                <img width="100%" src="assets/opt.png">
+            </a>
+            <p class="caption">
+                We can fit to input point cloud data through test-time optimization. The mIoU of the reconstructed
+                mesh is higher with a denser point cloud.  More importantly, with only 1k points on the front of the
+                mesh we are competitive with 10k points uniformly sampled everywhere. This specific setting simulates points coming from a front-facing
+                depth sensor and is of practical importance.
+            </p>
+        </figure>
+    </section>
+
+    <section id="bibtex">
+        <h2>Citation</h2>
+        <hr/>
+        <pre><code>
+        @misc{biswas2021hipnet,
+            title = {Hierarchical Neural Implicit Pose Network for Animation and Motion Retargeting}, 
+            author = {Sourav Biswas and Kangxue Yin and Maria Shugrina and Sanja Fidler and Sameh Khamis},
+            eprint = {2112.00958},
+            archivePrefix={arXiv},
+            primaryClass={cs.CV},
+            year = {2021}
+        }
+</code></pre>
+    </section>
+
+    <section id="paper">
+        <h2>Paper</h2>
+        <hr/>
+        <figure style="width: 100%;">
+            <a href="https://arxiv.org/abs/2112.00958">
+                <img width="100%" src="assets/preview.png">
+            </a>
+        </figure>
+        <hr/>
+    </section>
+
+</div>
+</body>
+</html>
