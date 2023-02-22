@@ -7,9 +7,8 @@ body {
     width: 980px;
 }
 h1 {
-    font-weight:700;
+    font-weight:300;
     line-height: 1.15em;
-    font-size: 2em;
 }
 
 h2 {
@@ -26,8 +25,9 @@ h1, h2, h3 {
     text-align: center;
 }
 h1 {
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 50px;
+    font-weight: 700;
+/*     font-size: 2.5em; */
 }
 h2 {
     font-weight: 400;
