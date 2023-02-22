@@ -42,9 +42,9 @@ section {
     clear: both;
 }
 .col-8 {
-     margin: auto;
      width: 12.5%;
      float: left;
+     letter-sapcing: 6px;
 }
 .col-6 {
      width: 16.6%;
