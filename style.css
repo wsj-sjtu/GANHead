@@ -45,7 +45,6 @@ section {
      width: 12.5%;
      float: left;
      font-size: 0.9em;
-     letter-spacing: 6px;
 }
 .col-6 {
      width: 16.6%;
@@ -66,6 +65,7 @@ section {
 .col-2 {
      width: 25%;
      float: left;
+     text-align: center;  
 }
 .row, .author-row, .affil-row {
      overflow: auto;
