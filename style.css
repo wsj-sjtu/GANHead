@@ -44,6 +44,8 @@ section {
 .col-8 {
      width: 12.5%;
      float: left;
+     font-size: 0.9em;
+     letter-spacing: 6px;
 }
 .col-6 {
      width: 16.6%;
@@ -62,7 +64,7 @@ section {
      float: left;
 }
 .col-2 {
-     width: 50%;
+     width: 25%;
      float: left;
 }
 .row, .author-row, .affil-row {
@@ -75,8 +77,7 @@ section {
     margin: 16px 0px 16px 0px;
 }
 .authors {
-    font-size: 12px;
-    letter-sapcing: 6px;
+    font-size: 18px;
 }
 .affil-row {
     margin-top: 16px;
