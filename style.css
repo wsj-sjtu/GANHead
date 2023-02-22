@@ -26,11 +26,11 @@ h1, h2, h3 {
 }
 h1 {
     font-size: 45px;
-    font-weight: 600;
+    font-weight: 570;
 /*     font-size: 2.5em; */
 }
 h2 {
-    font-weight: 400;
+    font-weight: 450;
     margin: 16px 0px 4px 0px;
 }
 .paper-title {
@@ -45,6 +45,7 @@ section {
      margin: auto;
      width: 12.0%;
      float: left;
+     font-size: 0.8em;
 }
 .col-6 {
      width: 16.6%;
