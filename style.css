@@ -44,7 +44,6 @@ section {
 .col-8 {
      width: 12.5%;
      float: left;
-     letter-sapcing: 6px;
 }
 .col-6 {
      width: 16.6%;
@@ -77,6 +76,7 @@ section {
 }
 .authors {
     font-size: 12px;
+    letter-sapcing: 6px;
 }
 .affil-row {
     margin-top: 16px;
