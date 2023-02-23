@@ -1,8 +1,5 @@
-@misc{biswas2021hipnet,
-    title = {Hierarchical Neural Implicit Pose Network for Animation and Motion Retargeting}, 
-    author = {Sourav Biswas and Kangxue Yin and Maria Shugrina and Sanja Fidler and Sameh Khamis},
-    eprint = {2112.00958},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    year = {2021}
+@misc{wu2023ganhead,
+    title = {GANHead: Towards Generative Animatable Neural Head Avatars}, 
+    author = {Sijing Wu, et al},
+    year = {2023}
 }
