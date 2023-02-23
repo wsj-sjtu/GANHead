@@ -21,7 +21,7 @@ a:link,a:visited {
 a:hover {
     color: #208799;
 }
-h1, h2, h3 {
+h1, h2 {
     text-align: center;
 }
 h1 {
@@ -32,6 +32,11 @@ h1 {
 h2 {
     font-weight: 450;
     margin: 16px 0px 4px 0px;
+}
+h3 {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 400;
 }
 .paper-title {
     padding: 16px 0px 16px 0px;
