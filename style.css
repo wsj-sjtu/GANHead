@@ -75,13 +75,13 @@ section {
      overflow: auto;
 }
 .author-row, .affil-row {
-    font-size: 20px;
+    font-size: 40px;
 }
 .row {
     margin: 16px 0px 16px 0px;
 }
 .authors {
-    font-size: 28px;
+    font-size: 18px;
 }
 .affil-row {
     margin-top: 16px;
