@@ -107,24 +107,6 @@
             GANHead achieves superior performance on head avatar generation and raw scan fitting.
             </p>
     </section>
-
-    <section id="method">
-        <h2>Method</h2>
-        <hr/>
-        <figure style="width: 100%;">
-            <a href="assets/method.png">
-                <img width="100%" src="assets/method.png">
-            </a>
-            <p class="caption" style="margin-bottom: 1px;">
-                <strong>HIPNet</strong> is composed of separate sub-network MLPs arranged hierarchically according to
-                an input skeleton. The final aggregation network is fed the results of these sub-networks an
-                 outputs the final SDF value. The subject latent codes \(\boldsymbol\beta_i\) are optimized
-                 during training, alongside the parameters of the pose encoding network \(\boldsymbol\Phi\).
-                 Refer to the text for additional details.
-            </p>
-        </figure>
-   
-    </section>
     
     
     <section id="Demo Video">
@@ -139,6 +121,26 @@
         </figure>
         <hr/>
     </section>
+   
+   
+    <section id="method">
+        <h2>Method</h2>
+        <hr/>
+        <figure style="width: 100%;">
+            <a href="assets/method.png">
+                <img width="100%" src="assets/method1.png">
+            </a>
+            <p class="caption" style="margin-bottom: 1px;">
+                Given shape, detail and color latent codes, the generation model outputs coarse shape geometry and detailed
+                normal and texture in the canonical space. The generated canonical head avatars can then be deformed to target poses and expressions via the
+                deformation module. In the first training stage, occupancy values of the deformed shapes are used to calculate the occupancy loss, along with the
+                LBS loss, to supervise the geometry network and the deformation module. In the second stage, the deformed textured avatars are rendered
+                to 2D RGB images and normal maps, together with the 3D color and normal losses, to supervise the normal and texture networks.
+            </p>
+        </figure>
+   
+    </section>
+   
 
     <section id="Applications">
         <h2>Application</h2>
