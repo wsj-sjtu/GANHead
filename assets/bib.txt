@@ -1,5 +1,0 @@
-@misc{wu2023ganhead,
-    title = {GANHead: Towards Generative Animatable Neural Head Avatars}, 
-    author = {Sijing Wu, et al},
-    year = {2023}
-}
