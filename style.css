@@ -44,11 +44,6 @@ h4 {
     font-weight: 400;
     margin: 10px 0px 4px 0px;
 }
-h5 {
-    text-align: left;
-    font-size: 1.0em;
-    font-weight: 200;
-}
 .paper-title {
     padding: 16px 0px 16px 0px;
 }
@@ -60,7 +55,7 @@ section {
 .col-8 {
      width: 12.5%;
      float: left;
-     font-size: 0.8em;
+     font-size: 1.0em;
 }
 .col-6 {
      width: 16.6%;
