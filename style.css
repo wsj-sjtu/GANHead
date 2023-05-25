@@ -54,6 +54,7 @@ section {
 }
 .col-8 {
      width: 12.5%;
+     margin: 0px 0px 0px 0px;
      float: left;
      font-size: 1.0em;
 }
