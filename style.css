@@ -56,7 +56,8 @@ section {
      width: 12.5%;
      margin: 0px 0px 0px 0px;
      float: left;
-     font-size: 1.0em;
+     font-size: 0.9em;
+     text-align: center;
 }
 .col-6 {
      width: 16.6%;
@@ -118,6 +119,7 @@ hr {
 p {
     line-height: 1.35em;
     font-weight: 200;
+    text-align: center;
 }
 .caption {
     font-size: 16px;
