@@ -50,6 +50,10 @@ h5 {
     font-weight: 300;
     margin: 0px 0px 0px 0px;
 }
+h6{
+    text-align: center;
+    font-size: 0.88em;
+}
 .paper-title {
     padding: 16px 0px 16px 0px;
 }
