@@ -44,6 +44,12 @@ h4 {
     font-weight: 400;
     margin: 10px 0px 4px 0px;
 }
+h5 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 0px 0px 0px 0px;
+}
 .paper-title {
     padding: 16px 0px 16px 0px;
 }
