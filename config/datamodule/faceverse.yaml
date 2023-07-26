@@ -1,0 +1,11 @@
+datamodule:
+  dataset_path: /mnt/ssd/wsj_data/dataset/faceverse/faceverse_prepared/faceverse_processed_uneven_stscan_new_9views/
+  data_list: ./lib/dataset/faceverse.csv
+  cache_path: ${starting_path}
+  num_workers: 32
+  batch_size: 32
+  points_per_frame: 2000
+  load_img: false
+  load_cache: false
+  load_surface: false
+  load_res: 256
