@@ -6,7 +6,7 @@ Official implentation of CVPR 2023 paper [*GANHead: Towards Generative Animatabl
 
 ## Training
 ### Prepare Data
-First download [FaceVerse dataset](https://github.com/LizhenWangT/FaceVerse-Dataset) following their instructions, and the fitted FLAME parameters form [here](https://drive.google.com/drive/folders/1d46c0x0ITw_J2LxUt4FOl7PNsIzxgMeJ?usp=drive_link). Organize all files into the following structure:
+First download [FaceVerse dataset](https://github.com/LizhenWangT/FaceVerse-Dataset) following their instructions, and the fitted FLAME parameters form [here](https://drive.google.com/file/d/1W-r6H573sKW_euG1zjiEgqsSaO_aVvld/view?usp=drive_link). Organize all files into the following structure:
 ```
 GANHead
 │
