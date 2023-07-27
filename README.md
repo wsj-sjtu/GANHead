@@ -7,6 +7,18 @@ Official implentation of CVPR 2023 paper [*GANHead: Towards Generative Animatabl
 ## Training
 ### Prepare Data
 First download [FaceVerse dataset](https://github.com/LizhenWangT/FaceVerse-Dataset) following their instructions.
+```
+GANHead
+│
+└─── data
+    │
+    └─── faceverse
+        │
+        └─── faceverse_dataset
+        |    └─── 001_01, 001_02, ...
+        └─── flame_params
+             └─── 001_01.pkl, 001_02.pkl, ...
+```
 Next, run the pre-processing script to get ground truth occupancy, surface color and normal, and rendered multiview images and normal maps:
 ```
 python preprocess.py --tot 1 --id 0 --scan_folder <folder_to_raw_scans> --flame_folder <folder_to_flame_parameters> --output_folder <>
