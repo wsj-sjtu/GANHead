@@ -14,6 +14,16 @@ python setup.py install
 
 2. Download the [FLAME model](https://flame.is.tue.mpg.de/download.php) (FLAME 2020), and put the generic_model.pkl file to `/lib/flame/flame_model/`.
 
+3. Install [kaolin](https://kaolin.readthedocs.io/en/latest/notes/installation.html) for fast occupancy query from meshes:
+```
+git clone https://github.com/NVIDIAGameWorks/kaolin
+cd kaolin
+python setup.py develop
+```
+
+4. If [PyTorch3D](https://github.com/facebookresearch/pytorch3d) can not be installed correctly, install it manually following their [instructions](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
+
+
 
 
 ## Training
