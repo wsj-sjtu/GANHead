@@ -1,8 +1,18 @@
 # GANHead: Towards Generative Animatable Neural Head Avatars
 ## [Paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Wu_GANHead_Towards_Generative_Animatable_Neural_Head_Avatars_CVPR_2023_paper.pdf) | [Project Page](https://wsj-sjtu.github.io/GANHead/) | [Video](https://www.youtube.com/watch?v=Cg0ubzo7DXk)
 Official implentation of CVPR 2023 paper [*GANHead: Towards Generative Animatable Neural Head Avatars*](https://openaccess.thecvf.com/content/CVPR2023/papers/Wu_GANHead_Towards_Generative_Animatable_Neural_Head_Avatars_CVPR_2023_paper.pdf).
-### Code Comming Soon! 😉
 
+## Installation
+1. Clone the repository and set up a conda environment with all dependencies as follows:
+```
+git clone https://github.com/wsj-sjtu/GANHead.git
+cd GANHead
+conda env create -f env.yml
+conda activate ganhead
+python setup.py install
+```
+
+2. Download FLAME models
 
 ## Training
 ### Prepare Data
@@ -17,7 +27,7 @@ GANHead
         └─── faceverse_dataset
         |    └─── 001_01, 001_02, ...
         └─── flame_params
-             └─── 001_01.pkl, 001_02.pkl, ...
+             └─── 001_01_flame.pkl, 001_02_flame.pkl, ...
 ```
 Next, run the pre-processing script to get ground truth occupancy, surface color and normal, and rendered multiview images and normal maps:
 ```
