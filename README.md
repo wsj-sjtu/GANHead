@@ -12,7 +12,9 @@ conda activate ganhead
 python setup.py install
 ```
 
-2. Download FLAME models
+2. Download the [FLAME model](https://flame.is.tue.mpg.de/download.php) (FLAME 2020), and put the generic_model.pkl file to `/lib/flame/flame_model/`.
+
+
 
 ## Training
 ### Prepare Data
