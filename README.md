@@ -29,11 +29,11 @@ python setup.py develop
 ```
 GANHead
 │
+└─── data
+│    └─── yufeng_1718
 └─── outputs
-    │
-    └─── stage1_model
-    │
-    └─── stage2_model
+     └─── stage1_model
+     └─── stage2_model
 ```
 
 
@@ -46,13 +46,13 @@ First download [FaceVerse dataset](https://github.com/LizhenWangT/FaceVerse-Data
 GANHead
 │
 └─── data
-    │
-    └─── faceverse
-        │
-        └─── faceverse_dataset
-        |    └─── 001_01, 001_02, ...
-        └─── flame_params
-             └─── 001_01_flame.pkl, 001_02_flame.pkl, ...
+     │
+     └─── faceverse
+          │
+          └─── faceverse_dataset
+          |    └─── 001_01, 001_02, ...
+          └─── flame_params
+               └─── 001_01_flame.pkl, 001_02_flame.pkl, ...
 ```
 Next, run the pre-processing script to get ground truth occupancy, surface color and normal, and rendered multiview images and normal maps:
 ```
