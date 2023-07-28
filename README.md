@@ -74,11 +74,16 @@ python precompute.py expname=coarse datamodule=faceverse agent_tot=1 agent_id=0
 ```
 Multiple instances of the script can also be runned in parallel by specifying `--agent_tot` and `--agent_id`.
 
-4. Stage2: train the normal and texture networks.
+3. Stage2: train the normal and texture networks.
 ```
 python train.py expname=fine datamodule=faceverse +experiments=fine starting_path='./outputs/coarse/checkpoints/last.ckpt'
 ```
 This step takes around 12 hours on 4 NVIDIA 3090 GPUs.
+
+## Inference
+### Sampling
+### Face reenactment
+### Raw scan fitting
 
 ## Acknowledgements
 This project is built upon [gdna](https://github.com/xuchen-ethz/gdna). Some code snippets are also borrowed from [DECA](https://github.com/yfeng95/DECA) and [IMavatar](https://github.com/zhengyuf/IMavatar). Thanks for these great projects. We thank all the authors for their great work and repos.
