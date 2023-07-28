@@ -41,7 +41,7 @@ GANHead
 
 ## Training
 ### Prepare Data
-First download [FaceVerse dataset](https://github.com/LizhenWangT/FaceVerse-Dataset) following their instructions, and the fitted FLAME parameters form [here](https://drive.google.com/file/d/1W-r6H573sKW_euG1zjiEgqsSaO_aVvld/view?usp=drive_link). Organize all files into the following structure:
+First download [FaceVerse dataset](https://github.com/LizhenWangT/FaceVerse-Dataset) following their instructions, and the fitted FLAME parameters form [Google drive](https://drive.google.com/file/d/1W-r6H573sKW_euG1zjiEgqsSaO_aVvld/view?usp=drive_link). Organize all files into the following structure:
 ```
 GANHead
 │
@@ -56,8 +56,29 @@ GANHead
 ```
 Next, run the pre-processing script to get ground truth occupancy, surface color and normal, and rendered multiview images and normal maps:
 ```
-python preprocess.py --tot 1 --id 0 --scan_folder <folder_to_raw_scans> --flame_folder <folder_to_flame_parameters> --output_folder <>
+python preprocess.py --tot 1 --id 0
 ```
+You can run multiple instances of the script in parallel by simply specifying `--tot` to be the number of total instances and `--id` to be the rank of current instance. For example, divide the task into 4 instances and run the first instance on GPU0: `CUDA_VISIBLE_DEVICES=0 python preprocess.py --tot 4 --id 0`.
+
+### Training
+Our model is trained in two stages following the steps below:
+1. Stage1: train the geometry network and deformation module.
+```
+python train.py expname=coarse datamodule=faceverse
+```
+This step takes around 12 hours on 4 NVIDIA 3090 GPUs.
+
+2. Precompute
+```
+python precompute.py expname=coarse datamodule=faceverse agent_tot=1 agent_id=0
+```
+Multiple instances of the script can also be runned in parallel by specifying `--agent_tot` and `--agent_id`.
+
+4. Stage2: train the normal and texture networks.
+```
+python train.py expname=fine datamodule=faceverse +experiments=fine starting_path='./outputs/coarse/checkpoints/last.ckpt'
+```
+This step takes around 12 hours on 4 NVIDIA 3090 GPUs.
 
 ## Acknowledgements
 This project is built upon [gdna](https://github.com/xuchen-ethz/gdna). Some code snippets are also borrowed from [DECA](https://github.com/yfeng95/DECA) and [IMavatar](https://github.com/zhengyuf/IMavatar). Thanks for these great projects. We thank all the authors for their great work and repos.
