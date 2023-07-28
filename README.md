@@ -2,7 +2,8 @@
 ## [Paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Wu_GANHead_Towards_Generative_Animatable_Neural_Head_Avatars_CVPR_2023_paper.pdf) | [Project Page](https://wsj-sjtu.github.io/GANHead/) | [Video](https://www.youtube.com/watch?v=Cg0ubzo7DXk)
 Official implentation of CVPR 2023 paper [*GANHead: Towards Generative Animatable Neural Head Avatars*](https://openaccess.thecvf.com/content/CVPR2023/papers/Wu_GANHead_Towards_Generative_Animatable_Neural_Head_Avatars_CVPR_2023_paper.pdf).
 
-## Installation
+## Getting Started
+# Installation
 1. Clone the repository and set up a conda environment with all dependencies as follows:
 ```
 git clone https://github.com/wsj-sjtu/GANHead.git
@@ -22,6 +23,18 @@ python setup.py develop
 ```
 
 4. If [PyTorch3D](https://github.com/facebookresearch/pytorch3d) can not be installed correctly, install it manually following their [instructions](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
+
+# Run demos
+1. Download pretrained models from [here](https://drive.google.com/file/d/1R1QLxiMAHiLmcQGHGcDfu0yHp5JcKaEV/view?usp=drive_link) and place them in the `./outputs` folder as fllowing structure:
+```
+GANHead
+│
+└─── outputs
+    │
+    └─── stage1_model
+    │
+    └─── stage2_model
+```
 
 
 
