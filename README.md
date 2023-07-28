@@ -30,7 +30,7 @@ python setup.py develop
 GANHead
 │
 └─── data
-│    └─── yufeng_1718
+│    └─── yufeng_1812
 └─── outputs
      └─── stage1_model
      └─── stage2_model
