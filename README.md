@@ -25,7 +25,7 @@ python setup.py develop
 4. If [PyTorch3D](https://github.com/facebookresearch/pytorch3d) can not be installed correctly, install it manually following their [instructions](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
 
 ### Run demos
-1. Download pretrained models from [here](https://drive.google.com/file/d/1R1QLxiMAHiLmcQGHGcDfu0yHp5JcKaEV/view?usp=drive_link) and place them in the `./outputs` folder as fllowing structure:
+1. Download pretrained models and test motion sequence (taken from [IMavatar data](https://drive.google.com/file/d/1Hzv41ZkpMK1X9h9Z-B54S-Nn1GcMveb8/view)) from [Google drive](https://drive.google.com/file/d/1ztHGU9GdCoMkAlQB7ynoztIFewVaILlQ/view?usp=drive_link) and organize them according to the fllowing structure:
 ```
 GANHead
 │
